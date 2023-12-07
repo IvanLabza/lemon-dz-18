@@ -6,15 +6,35 @@
       Email
       <input
         class="form-mail input"
-        type="mail"
         placeholder="debra.holt@example.com"
+        type="text"
+        [(ngModel)]="inputValue"
+        [ngModelOptions]="{ standalone: true }"
       />
-      <img width="24" height="24" src="./assets/xIcon.svg" alt="" />
+      <img
+        width="24"
+        height="24"
+        src="./assets/xIcon.svg"
+        alt=""
+        (click)="clearInput()"
+      />
     </label>
     <label class="form-label">
       Password
-      <input type="password" class="form-pass input" placeholder="••••••••" />
-      <img width="24" height="24" src="./assets/hideIcon.svg" alt="" />
+      <input
+        type="{{ showPassword ? 'text' : 'password' }}"
+        [(ngModel)]="password"
+        class="form-pass input"
+        placeholder="••••••••"
+        [ngModelOptions]="{ standalone: true }"
+      />
+      <img
+        (click)="togglePassword()"
+        width="24"
+        height="24"
+        src="./assets/hideIcon.svg"
+        alt=""
+      />
     </label>
     <div class="wrapper">
       <label class="form-label checkbox">
