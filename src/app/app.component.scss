@@ -1,0 +1,29 @@
+.container {
+  padding: 32px;
+  margin: 0 auto;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 32px;
+    max-width: calc(1440px - 32px * 2);
+    margin: 0 auto;
+    border-radius: 44px;
+    background: #fcfdff;
+    .wrapper__desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 70px;
+    }
+    .image-container {
+      max-width: 100%; /* Чтобы изображение не выходило за пределы контейнера */
+      height: auto; /* Автоматически подстраиваем высоту */
+      display: flex; /* Используем flex для центрирования изображения, если нужно */
+      justify-content: center;
+      align-items: center;
+    }
+    .wrapper-img {
+    }
+  }
+}
